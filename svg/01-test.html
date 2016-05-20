@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>01-test formes</title>
+	<script src="dist/snap.svg.js"></script>
+</head>
+<body>
+
+<!-- un cercle -->
+	<svg height="64" width="64" >   
+    <circle cx="32" cy="32" r="32" fill="#2ecc71"/>
+    </svg>
+
+<!-- deux cercles -->
+    <svg height="64" width="64">
+      <circle cx="32" cy="32" r="28" stroke="#2ecc71" stroke-width="4" fill="none"></circle>
+      <circle cx="32" cy="32" r="20" stroke="#08BCD0" stroke-width="4" fill="none" />
+    </svg>
+
+<!-- un carré -->
+    <svg height="64" width="64">
+      <rect x="2" y="2" height="60" width="60" fill="none" stroke="#ff8a65" stroke-width="4"></rect>
+    </svg>
+
+<!-- un rectangle -->
+    <svg height="80" width="80">
+      <rect x="5" y="20" height="40" width="70" fill="#f1c40f" stroke="#16a085" stroke-width="5px" />
+    </svg>
+
+<!-- un carré dans un viewbox -->
+	<svg height="100" width="100" style="border: 1px solid #16a085;" viewBox="0 0 100 100">
+      <rect x="10" y="10" height="50" width="50" fill="none" stroke="#ff8a65" stroke-width="4"></rect>
+    </svg>
+
+    <svg height="100" width="100" style="border: 1px solid #16a085;" viewBox="20 20 100 100">
+      <rect x="10" y="10" height="50" width="50" fill="none" stroke="#ff8a65" stroke-width="4"></rect>
+    </svg>
+
+    <svg height="100" width="100" style="border: 1px solid #16a085;" viewBox="-20 -20 100 100">
+      <rect x="10" y="10" height="50" width="50" fill="none" stroke="#ff8a65" stroke-width="4"></rect>
+    </svg>
+
+    <svg height="100" width="100" style="border: 1px solid #16a085;" viewBox="0 0 50 50">
+      <rect x="10" y="10" height="50" width="50" fill="none" stroke="#ff8a65" stroke-width="4"></rect>
+    </svg>
+
+    <svg height="100" width="100" style="border: 1px solid #16a085;" viewBox="0 0 300 300">
+      <rect x="10" y="10" height="50" width="50" fill="none" stroke="#ff8a65" stroke-width="4"></rect>
+    </svg>
+	<br/>
+	<!-- un trait -->
+    <svg width="225" height="325">
+      <line x1="5" y1="5" x2="200" y2="200" stroke="#34495e" stroke-width="10" /></line>
+    </svg>
+	<br/>
+	<!-- triangle -->
+    <svg height="64" width="64">
+      <polygon fill="none" stroke="#FF8A65" stroke-width="4" points="30,4 4,60 60,60"/><polygon>
+    </svg>
+	<svg height="64" width="64">
+      <polygon fill="none" stroke="#FF8A65" stroke-width="4" points="2,4 4,60 60,60"/><polygon>
+    </svg>
+    <svg height="64" width="200">
+      <polygon fill="none" stroke="#FF8A65" stroke-width="4" points="30,4 20,60 80,60"/><polygon>
+    </svg>
+	<br/>
+	<!-- un triangle with path -->
+	<svg height="250" width="300">
+      <path d="M150 5 L75 200 L225 200 Z"  fill="#1abc9c" stroke="#95a5a6" stroke-width="5" />
+    </svg>
+    <!-- M: se traduit par «passer à». Ici, nous passons à la coordonnée 150,0 (et, en utilisant notre analogie stylo, toucher la plume sur ce premier point de notre chemin)
+     L: se traduit par "ligne". Nous traçons une ligne du point courant sur la position "absolue" de 75.200. Depuis la commande de chemin utilise une lettre majuscule, la coordonnée est absolue. Si nous avions utilisé un minuscule l, les coordonnées seront interprétées comme le décalage par rapport à notre dernier point relatif. En tout état de cause, cette commande L qui est la ligne du haut du triangle vers le point bas à gauche. Que nous dessinons une autre ligne à travers le fond du triangle à 225.200. Notez que nous aurions pu à gauche de la L sur la deuxième ligne comme la syntaxe de chemin SVG permet d'être douloureusement succincte mais efficace.
+     Z: se traduit par "proche chemin". Ceci fermera notre chemin de triangle tournant notre chemin ouvert à un chemin fermé en traçant la ligne arrière jusqu'à notre premier point. -->
+
+
+</body>
+</html>

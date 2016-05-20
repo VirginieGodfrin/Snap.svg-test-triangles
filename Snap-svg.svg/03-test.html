@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>03-test.html</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/03-test.css">
+	<script src="dist/snap.svg.js"></script>
+</head>
+<body>
+<script>
+	
+	var s = Snap(1000,1000);
+
+	var circle = s.circle(100,100,50);
+
+	circle.attr({
+	    fill:'#fff',
+	    stroke:'#f4f4f4',
+	    strokeWidth : 10 
+	});
+
+	//clone des yeux
+	var circleClone = circle.clone().attr({cx: 250}),
+	ellipse = s.ellipse(100,100,10,15),
+	eyes = s.g(ellipse,ellipse.clone().attr({cx:250})),
+	glasses = s.g(circle, circleClone, eyes);
+
+	//création de la barre de lunettes
+	var basicLine = {
+	    strokeWidth: 10,
+	    stroke:'#000',
+	    fill : 'none'
+	};
+	//before sert à placer la courbe de bézier avant la forme, peut être utilisée avec after
+	circle.before(s.path('M 150 110 q 27 -35 50 0').attr(basicLine));
+
+	// load mustasc.svg
+	/*Snap.load('mustach.svg', function (loadedFragment){
+        s.append( loadedFragment );
+
+	});*/
+
+	Snap.load('mustach.svg', function(f){
+		//sélectionner notre élément
+		var m = f.select('path');
+		//le dupliquer
+		var mLeft = m.clone();
+		//l'inverser (petite astuce pour inverser un élément, il suffit d’inverser sa scale sur x)
+		var mRight = m.transform('s-1,1');
+		//je le déplace pour la symétrie
+		var mWidth = Math.floor(mLeft.getBBox().width);
+		var t = new Snap.Matrix();
+		t.translate(-mWidth, 0);
+		mLeft.transform(t);
+		//je crée un groupe et je le place au bonne endroit sur notre surface.
+		var mustach = s.g(mLeft,mRight).transform('translate(160,175)');
+		//j'ajoute un dégradé à la moustache
+		mustach.attr({fill: "l(0,0,1,1)#fff-#000"});
+	});
+
+
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>02-Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="dist/snap.svg.js"></script>
+    </head>
+    <body>
+        <script>
+            s = Snap(800, 600);
+        //creation d'un premier grand test
+            var bigCircle = s.circle(150, 150, 100);
+
+            //ajout d'attributs à ce grand cercle
+            bigCircle.attr({
+                fill: "#bada55",
+                stroke: "#000",
+                strokeWidth: 5
+            });
+
+        // je crée un autre cercle
+            var smallCircle = s.circle(100, 150, 70);
+
+        // je crée un group avec ce cercle et j'y ajoute un autre
+            var discs = s.group(smallCircle, s.circle(200, 150, 70));
+
+        // je modifie tout les attributs du groupe
+            discs.attr({
+                fill: "#fff"
+            });
+
+        // j'ajoute un masque au grand cercle qui ne montre que ce qui est dans les cercles de discs
+            bigCircle.attr({
+                mask: discs
+            });
+
+        //j'ajoute une animation au premier cercle
+            smallCircle.animate({r: 40}, 3000);
+        //j'ajoute une animation au second cercke
+            discs.select("circle:nth-child(2)").animate({r: 30}, 1000);
+
+        //creation ds motifs
+            var p = s.path("M10-5-10,15M15,0,0,15M0-5-20,15").attr({
+                    fill: "none",
+                    stroke: "#bada55",
+                    strokeWidth: 5
+                });
+
+        // application des motifs
+        // spécification des dimmensions dans le pattern
+            p = p.pattern(0, 0, 10, 10);
+
+        // ensuite je l'ajoute comme attribut à bigCircle
+            bigCircle.attr({
+                fill: p
+            });
+
+
+        // changement du dégradé des cercles
+        // Cette chaîne signifie dégradé radial relatif
+        // Du blanc au noir
+            discs.attr({fill: "r()#fff-#000"});
+
+        //je peux possitioner mon dégradé en lui donnant une position absolue
+        //gradient absolu avec un R majuscule
+            discs.attr({fill: "R(110, 150, 50)#000-#fff"});
+
+        // Of course we could animate color as well
+            p.select("path").animate({stroke: "#f00"}, 5000);
+
+        // ajout de texte
+            s.text(200, 100, "Snap.svg");
+            var t = s.text(200, 120, ["Snap", ".", "svg"]);
+            t.selectAll("tspan:nth-child(3)").attr({
+                fill: "#900",
+                "font-size": "20px"
+            });
+
+    </script>
+
+</body>
+</html>

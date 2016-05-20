@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>08-gradient</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="dist/snap.svg.js"></script>
+    </head>
+
+    <body>
+
+        <script>
+
+            /*
+            var g = s.gradient("L(10,10, 100,300) #000-#fff");
+            gradient: 
+                type: L R (l r) : coodonées en absolu (relatives)
+                linear vector gradient : x1 y1 x2 y2
+                 or radial radient : cx cy r
+                point focal  à partir du centre du cercle & color: fx fy
+            */
+
+            var r = Snap (150, 150);
+        // rectangle with rounded corners
+                var c = r.rect(10, 10, 100, 100, 5);
+        //gradient linear with 2 colors - 3 encres
+                var g = r.gradient("L(12,12,10,90) #000-#9390D4-#fff");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var u = Snap (150, 150);
+                var c = u.rect(10, 10, 100, 100, 5);
+                var g = u.gradient("L(90,10,100,10) #000-#9390D4-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var u = Snap (150, 150);
+                var c = u.rect(10, 10, 100, 100, 5);
+        //gradient linear with 2 colors - 2 encres
+                var g = u.gradient("L(20, 12,50,100) #000-#9390D4");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var p = Snap (150, 150);
+                var c = p.rect(10, 10, 100, 100, 5);
+        //gradient linear with 2 colors
+                var g = p.gradient("R(50, 50, 10) #fff-#9390D4");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var q = Snap (150, 150);
+                var c = q.rect(10, 10, 100, 100, 5);
+                var g = q.gradient("R(50, 50, 100) #fff-#9390D4");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var s = Snap (150, 150);
+                var c = s.rect(10, 10, 100, 100, 5);
+                var g = s.gradient("R(50, 50, 200) #fff-#9390D4");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var t = Snap (150, 150);
+                var c = t.rect(10, 10, 100, 100, 5);
+        //gradient linear with 2 colors - 3 & variation sur la 2
+                var g = t.gradient("L(0, 0, 100, 100)#000-#f00:90-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var v = Snap (150, 150);
+                var c = v.rect(10, 10, 100, 100, 5);
+                var g = v.gradient("L(0, 0, 100, 100)#000-#f00:50-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var x = Snap (150, 150);
+                var c = x.rect(10, 10, 100, 100, 5);
+                var g = x.gradient("L(0, 0, 100, 100)#000-#f00:10-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var y = Snap (150, 150);
+                var c = y.rect(10, 10, 100, 100, 5);
+        //gradient linear with 2 colors - 3 & variation sur la 1
+                var g = y.gradient("L(0, 0, 100, 100)#000:90-#100C66-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var z = Snap (150, 150);
+                var c = z.rect(10, 10, 100, 100, 5);
+                var g = z.gradient("L(0, 0, 100, 100)#000:50-#100C66-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var w = Snap (150, 150);
+                var c = w.rect(10, 10, 100, 100, 5);
+                var g = w.gradient("L(0, 0, 100, 100)#000:10-#100C66-#000");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var a = Snap (150, 150);
+                var c = a.rect(10, 10, 100, 100, 5);
+        //gradient linear with 2 colors - 3 & variation sur la 1
+                var g = a.gradient("L(0, 0, 100, 100)#000-#F50774-#fff:90");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var b = Snap (150, 150);
+                var c = b.rect(10, 10, 100, 100, 5);
+                var g = b.gradient("L(0, 0, 100, 100)#000-#F50774-#fff:50");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });
+
+            var d = Snap (150, 150);
+                var c = d.rect(10, 10, 100, 100, 5);
+                var g = d.gradient("L(0, 0, 100, 100)#000-#F50774-#fff:20");
+                c.attr({
+                    fill: g,
+                    stroke:"green",
+                    strokeWidth: 3
+                });    
+
+
+
+        </script>
+    </body>
+</html>

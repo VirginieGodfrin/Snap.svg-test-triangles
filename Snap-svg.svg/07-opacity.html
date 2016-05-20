@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>07-opacity</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="dist/snap.svg.js"></script>
+</head>
+<body>
+	
+	<script>
+
+	var s = Snap (500, 350);
+
+		var p1 = s.polyline([10, 10, 100, 100],[100, 100, 100, 300]);
+		p1.attr({ fill:'#165C80','fill-opacity':'0.8'});
+
+		var p2 = s.polyline(
+				[10, 10, 200, 10], 
+				[200, 10, 200, 100], 
+				[200, 100, 10, 100],
+				[10, 100, 10, 10 ]
+			);
+		p2.attr({ fill:'#820119','fill-opacity':'0.8'});
+
+		var p3 = s.polyline(
+			[150, 20, 300, 20],
+			[300, 20, 400,100],
+			[400, 100, 300, 200],
+			[300, 200, 150, 200]
+			);
+		p3.attr({ fill:'#635F60','fill-opacity':'0.8'});
+		var formes = s.g(p2,p1,p3);
+
+	var t = Snap (500, 350);
+
+		var p1 = t.polyline([10, 10, 100, 100],[100, 100, 100, 300]);
+		var z = t.gradient("L(40, 70, 90, 200) #000-#350BDE:2-#FFF");
+		p1.attr({ fill: z,'fill-opacity':'0.8'});
+
+		var p2 = t.polyline(
+				[10, 10, 200, 10], 
+				[200, 10, 200, 100], 
+				[200, 100, 10, 100],
+				[10, 100, 10, 10 ]
+			);
+		var x = t.gradient("R(120, 50, 60) #350BDE-#FFF");
+		p2.attr({ fill: x,'fill-opacity':'0.8'});
+
+		var p3 = t.polyline(
+			[150, 20, 300, 20],
+			[300, 20, 400,100],
+			[400, 100, 300, 200],
+			[300, 200, 150, 200]
+			);
+		var y = t.gradient("L( 200, 100, 300, 100) #000-#350BDE-#FFF");
+		p3.attr({ fill: y,'fill-opacity':'0.8'});
+		
+		var formes = s.g(p2,p1,p3);
+	</script>
+	
+</body>
+</html> 
