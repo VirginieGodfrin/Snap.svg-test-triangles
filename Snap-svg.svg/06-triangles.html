@@ -9,33 +9,22 @@
 
     <body>
     	<script>
-        /*var t = Snap (500, 350);
-
-        var p1 = t.polyline([10, 10, 100, 100],[100, 100, 100, 300]);
-        var x = t.gradient("R(120, 50, 60) #350BDE-#FFF");
-        p1.attr({ fill: z,'fill-opacity':'0.8'});*/
-
-
     		var s = Snap(600, 1500);
-            var triangle1 = s.polygon(10,10,10,300,100,200).attr({ fill: '#FA0505', 'fill-opacity':'0.6'});
-            var z = s.gradient("R(40, 200, 150) #E80C0C-#5E1C1C ");
-            var triangle1 = s.polygon(10,10,10,300,100,200).attr({ fill: z, 'fill-opacity':'0.8'});
 
-            var triangle2 = s.polygon(10,200,10,500,150,350).attr({ fill: '#FA0505', 'fill-opacity':'0.6'});
-            var z = s.gradient("R(70, 350, 150) #E80C0C-#5E1C1C ");
-            var triangle2 = s.polygon(10,200,10,500,150,350).attr({ fill: z, 'fill-opacity':'0.8'});
+            var z = s.gradient("R(40, 200, 150) rgba(245,5,49,0.8)-rgba(138,1,1,1)");
+            var triangle1 = s.polygon(10,10,10,300,100,200).attr({ fill: z });
 
-            var triangle2 = s.polygon(10,300,10,900,100,800).attr({ fill: '#FA0505', 'fill-opacity':'0.6'});
-            var z = s.gradient("R(50, 800, 400) #E80C0C-#5E1C1C ");
-            var triangle2 = s.polygon(10,300,10,900,100,800).attr({ fill: z, 'fill-opacity':'0.8'});
+            var z = s.gradient("R(70, 350, 150) rgba(245,5,49,0.8)-rgba(138,1,1,1)");
+            var triangle2 = s.polygon(10,200,10,500,150,350).attr({ fill: z });
 
-            var triangle2 = s.polygon(10,850,10,1500,150,950).attr({ fill: '#FA0505', 'fill-opacity':'0.6'});
-           	var z = s.gradient("R(100, 950, 400) #E80C0C-#5E1C1C ");
-           	var triangle2 = s.polygon(10,850,10,1500,150,950).attr({ fill: z, 'fill-opacity':'0.8'});
+            var z = s.gradient("R(50, 800, 400) rgba(245,5,49,0.8)-rgba(138,1,1,1)");
+            var triangle2 = s.polygon(10,300,10,900,100,800).attr({ fill: z });
 
-            var triangle2 = s.polygon(10,1300,10,1400,40,1320).attr({ fill: '#FA0505', 'fill-opacity':'0.6'});
-            var z = s.gradient("R(20, 1320, 30) #E80C0C-#5E1C1C ");
-           	var triangle2 = s.polygon(10,1300,10,1400,40,1320).attr({ fill: z, 'fill-opacity':'0.8'});
+           	var z = s.gradient("R(100, 950, 400) rgba(245,5,49,0.8)-rgba(138,1,1,1)");
+           	var triangle2 = s.polygon(10,850,10,1500,150,950).attr({ fill: z });
+
+            var z = s.gradient("R(20, 1320, 30) rgba(245,5,49,0.8)-rgba(138,1,1,1)");
+           	var triangle2 = s.polygon(10,1300,10,1400,40,1320).attr({ fill: z });
 		</script>
 
 
