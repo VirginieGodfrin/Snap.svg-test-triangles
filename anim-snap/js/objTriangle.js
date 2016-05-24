@@ -41,22 +41,27 @@ var s = Snap("#triangle");
 		},
 		moove: function (g){
 				g.animate(
-					{transform: 'r10,150,600'},
-					2000, 
+					{transform: 'r-10,150,600'},
+					1000, 
 					mina.bounce,
 					function(){
-						g.animate({transform: 'r0,150,600'},2000,mina.bounce)
+						g.animate({transform: 'r10,150,600'},1000,mina.bounce, 
+							function(){
+								g.animate({transform: 'r0,150,600'},1000,mina.bounce)
+								}
+							)
 					}
 				);
 		},
 
 		moove2: function (xx){
 				xx.animate(
-					{transform: 'r-10,150,600'},
+					{transform: 'r10,150,600'},
 					2000, 
 					mina.bounce,
 					function(){
 						xx.animate({transform: 'r0,150,600'},2000,mina.bounce)
+						
 					}
 				);
 		}
@@ -68,34 +73,9 @@ var s = Snap("#triangle");
 var test2 = triangle.create(100,400,100,800,300,600,'green');
 var test2 = triangle.group(test2);
 triangle.moove(test2);
+//triangle.moove2(test2);
 
-var test3 = triangle.create(100,400,100,800,300,600,'red');
-var test3 = triangle.group(test3);
-triangle.moove2(test3);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//var test3 = triangle.create(100,400,100,800,300,600,'red');
+//var test3 = triangle.group(test3);
+//triangle.moove2(test3);
 
