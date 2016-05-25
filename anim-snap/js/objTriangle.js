@@ -1,7 +1,8 @@
 
 var s = Snap("#triangle");
 
-//les fonctions 
+//les fonctions
+/*	
 	function createTriangle (x1, y1, x2, y2, x3, y3, color){
 		var triangle = s.polygon(x1, y1, x2, y2, x3, y3). attr({ fill: color });
 		return triangle;
@@ -23,10 +24,12 @@ var s = Snap("#triangle");
 					}
 				);
 	}
-
+*/
+	/*
 	var test1 = createTriangle(0,0,0,300,100,200,'grey');
 	var test1 = groupTriangle(test1);
 	moveTriangle(test1);
+	*/
 
 
 //l'objet triangle
@@ -41,13 +44,13 @@ var s = Snap("#triangle");
 		},
 		moove: function (g){
 				g.animate(
-					{transform: 'r-10,150,600'},
-					1000, 
-					mina.bounce,
+					{transform: 'r-2,40,100'},
+					600, 
+					mina.easeinout,
 					function(){
-						g.animate({transform: 'r10,150,600'},1000,mina.bounce, 
+						g.animate({transform: 'r2,40,100'},1000,mina.easeinout, 
 							function(){
-								g.animate({transform: 'r0,150,600'},1000,mina.bounce)
+								g.animate({transform: 'r0,40,100'},1000,mina.bounce)
 								}
 							)
 					}
@@ -56,12 +59,15 @@ var s = Snap("#triangle");
 
 		moove2: function (xx){
 				xx.animate(
-					{transform: 'r10,150,600'},
-					2000, 
-					mina.bounce,
+					{transform:'r2,70,600'},
+					600, 
+					mina.easeinout,
 					function(){
-						xx.animate({transform: 'r0,150,600'},2000,mina.bounce)
-						
+						xx.animate({transform: 'r-2,70,600'},1000,mina.easeinout,
+							function(){
+								xx.animate({transform: 'r0,70,600'},1000,mina.bounce)
+								}
+							)
 					}
 				);
 		}
@@ -70,12 +76,5 @@ var s = Snap("#triangle");
 	}
 
 
-var test2 = triangle.create(100,400,100,800,300,600,'green');
-var test2 = triangle.group(test2);
-triangle.moove(test2);
-//triangle.moove2(test2);
 
-//var test3 = triangle.create(100,400,100,800,300,600,'red');
-//var test3 = triangle.group(test3);
-//triangle.moove2(test3);
 
