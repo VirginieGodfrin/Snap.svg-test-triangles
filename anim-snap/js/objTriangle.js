@@ -14,7 +14,6 @@ var s = Snap("#triangle");
 	}
 
 	function moveTriangle(groupTriangle){
-
 				groupTriangle.animate(
 					{transform: 'r10,50,150'},
 					2000, 
@@ -30,8 +29,7 @@ var s = Snap("#triangle");
 	var test1 = groupTriangle(test1);
 	moveTriangle(test1);
 	*/
-
-
+	
 //l'objet triangle
 	var triangle = {
 		create: function(x1, y1, x2, y2, x3, y3, color){
@@ -43,36 +41,34 @@ var s = Snap("#triangle");
 			return group;
 		},
 		moove: function (g){
-				g.animate(
-					{transform: 'r-2,40,100'},
-					600, 
-					mina.easeinout,
-					function(){
-						g.animate({transform: 'r2,40,100'},1000,mina.easeinout, 
-							function(){
-								g.animate({transform: 'r0,40,100'},1000,mina.bounce)
-								}
-							)
-					}
-				);
+			g.animate(
+				{transform: 'r-2,40,100'},
+				600, 
+				mina.easeinout,
+				function(){
+					g.animate({transform: 'r2,40,100'},1000,mina.easeinout, 
+						function(){
+							g.animate({transform: 'r0,40,100'},1000,mina.bounce)
+							}
+						)
+				}
+			);
 		},
 
-		moove2: function (xx){
-				xx.animate(
-					{transform:'r2,70,600'},
-					600, 
-					mina.easeinout,
-					function(){
-						xx.animate({transform: 'r-2,70,600'},1000,mina.easeinout,
-							function(){
-								xx.animate({transform: 'r0,70,600'},1000,mina.bounce)
-								}
-							)
+		moove2: function (g){
+			g.animate(
+				{transform:'r2,70,600'},
+				600, 
+				mina.easeinout,
+				function(){
+					g.animate({transform: 'r-2,70,600'},1000,mina.easeinout,
+						function(){
+							g.animate({transform: 'r0,70,600'},1000,mina.bounce)
+							}
+						)
 					}
-				);
+			);
 		}
-
-
 	}
 
 

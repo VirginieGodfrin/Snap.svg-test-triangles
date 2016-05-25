@@ -13,13 +13,13 @@ $(window).scroll(function(){
     	console.log(" premier triangle scroll ok ");
     	triangle.moove(test2);
 	}else{
-			console.log("scroll not ok")
+			console.log("scroll 50 not ok")
 		}
 
 	if($(window).scrollTop() > 200){
     	console.log(" 2° traingle scroll ok ");
     	triangle.moove2(test3);
 	}else{
-		console.log("scroll not ok")
-	}
+		console.log("scroll 50 not ok")
+		}
 });	
