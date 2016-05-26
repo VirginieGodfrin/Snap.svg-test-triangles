@@ -1,7 +1,4 @@
-/*
-	var z = s.gradient("R(40, 200, 150) rgba(245,5,49,0.8)-rgba(138,1,1,1)");
-    var triangle1 = s.polygon(10,10,10,300,100,200).attr({ fill: z });
-*/
+
 	var triangle = {
 		//creation du gradient 
 		gradient: function(don){
