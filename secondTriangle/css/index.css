@@ -1,0 +1,14 @@
+html,body{
+  margin:0;
+  padding:0;
+  background-color:#fff;
+}
+
+#triangle{
+	width: 800px;
+	height: 350px;
+}
+
+button{
+	margin-left: 10px;
+}

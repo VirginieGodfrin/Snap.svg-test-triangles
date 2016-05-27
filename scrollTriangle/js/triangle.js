@@ -25,16 +25,19 @@ function Triangle (x1 , y1, x2, y2, x3, y3, rayon){
 	var g = this.create();
 
 	this.move = function(angle, vitesse, mina){
-		
 		var vitesse = typeof vitesse != 'undefined' ? vitesse : this.vitesse;
 		var mina = typeof mina != 'undefined' ? mina : this.mina;
 		var angle = typeof angle != 'undefined' ? angle : this.angle;
-
+/*
+		var vitesse = vitesse;
+		var mina = mina;
+		var angle = angle;
+*/
 		g.animate({transform: 'r-'+angle+','+xg+' , '+yg+''}, vitesse, mina, 
 			function(){
 				console.log('callback called');
 				g.animate({transform: 'r0,'+xg+' , '+yg+''}, vitesse, mina)
 			}
 		);
-	} 
+	}
 }
