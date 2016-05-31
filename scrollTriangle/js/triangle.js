@@ -35,7 +35,6 @@ function Triangle (x1 , y1, x2, y2, x3, y3, rayon){
 */
 		g.animate({transform: 'r-'+angle+','+xg+' , '+yg+''}, vitesse, mina, 
 			function(){
-				console.log('callback called');
 				g.animate({transform: 'r0,'+xg+' , '+yg+''}, vitesse, mina)
 			}
 		);
